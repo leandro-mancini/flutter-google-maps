@@ -53,39 +53,42 @@ class _PostosPageState extends State<PostosPage> {
             ),
             child: Column(
               children: <Widget>[
-                Row(
-                  children: <Widget>[
-                    Text(
-                      'Posto Shell',
-                      style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 18,
+                Container(
+                  child: Row(
+                    children: <Widget>[
+                      Text(
+                        'Posto Shell',
+                        style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 18,
+                        ),
                       ),
-                    ),
-                    Container(
-                      margin: EdgeInsets.only(
-                        left: 10,
-                        right: 5,
+                      Container(
+                        margin: EdgeInsets.only(
+                          left: 10,
+                          right: 5,
+                        ),
+                        child: Icon(
+                          Icons.star_border,
+                          color: Colors.orange,
+                        ),
                       ),
-                      child: Icon(
-                        Icons.star_border,
-                        color: Colors.orange,
+                      Text(
+                        'Conveniado',
+                        style: TextStyle(
+                          color: Colors.black87,
+                          fontSize: 14,
+                        ),
                       ),
-                    ),
-                    Text(
-                      'Conveniado',
-                      style: TextStyle(
-                        color: Colors.black87,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 Container(
                   margin: EdgeInsets.only(
                     top: 20,
                   ),
                   child: Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Card(
                         shape: RoundedRectangleBorder(
@@ -122,50 +125,81 @@ class _PostosPageState extends State<PostosPage> {
                           ),
                         ),
                       ),
-                      Column(
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              Container(
-                                margin: EdgeInsets.only(
-                                  right: 3,
-                                ),
-                                child: Text(
-                                  '20',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: Color(0xFF6200EE),
-                                    fontWeight: FontWeight.bold,
+                      Container(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Container(
+                              child: Row(
+                                children: <Widget>[
+                                  Container(
+                                    margin: EdgeInsets.only(
+                                      right: 3,
+                                    ),
+                                    child: Text(
+                                      '20',
+                                      style: TextStyle(
+                                        fontSize: 14,
+                                        color: Color(0xFF6200EE),
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
                                   ),
-                                ),
+                                  Text(
+                                    'minutos',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      color: Colors.grey
+                                    ),
+                                  ),
+                                ],
                               ),
-                              Text(
-                                'minutos',
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(
+                                top: 5,
+                                bottom: 5,
+                              ),
+                              child: Text(
+                                'Rodovia Don Pedro, 2211',
+                                textAlign: TextAlign.left,
                                 style: TextStyle(
-                                  fontSize: 14,
-                                  color: Colors.grey
+                                  color: Colors.black87,
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
                                 ),
                               ),
-                            ],
-                          ),
-                          Text(
-                            'Rodovia Don Pedro, 2211',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              color: Colors.black87,
-                              fontSize: 16,
-                              fontWeight: FontWeight.bold
                             ),
-                          ),
-                          Text(
-                            'São Paulo - SP',
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              color: Colors.black87,
-                              fontSize: 16,
+                            Container(
+                              child: Text(
+                                'São Paulo - SP',
+                                textAlign: TextAlign.left,
+                                style: TextStyle(
+                                  color: Colors.black87,
+                                  fontSize: 16,
+                                ),
+                              ),
                             ),
-                          ),
-                        ],
+                            
+                            // Text(
+                            //   'Rodovia Don Pedro, 2211',
+                            //   textAlign: TextAlign.left,
+                            //   style: TextStyle(
+                            //     color: Colors.black87,
+                            //     fontSize: 16,
+                            //     fontWeight: FontWeight.bold,
+                            //   ),
+                            // ),
+                            // Text(
+                            //   'São Paulo - SP',
+                            //   textAlign: TextAlign.left,
+                            //   style: TextStyle(
+                            //     color: Colors.black87,
+                            //     fontSize: 16,
+                            //   ),
+                            // ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -186,19 +220,25 @@ class _PostosPageState extends State<PostosPage> {
                           ),
                         ),
                         onPressed: () => {},
+                        borderSide: BorderSide(
+                          color: Color(0xFF6200EE),
+                        ),
                         shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(40))
                       ),
-                      OutlineButton(
-                        padding: EdgeInsets.all(0),
-                        child: Text(
+                      OutlineButton.icon(
+                        shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(40)),
+                        icon: Icon(
+                          Icons.near_me,
+                          color: Color(0xFF6200EE),
+                        ),
+                        label: Text(
                           'Rota',
                           style: TextStyle(
                             color: Colors.black87,
                             fontSize: 14,
                           ),
                         ),
-                        onPressed: () => {},
-                        shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(40))
+                        onPressed: () {},
                       )
                     ],
                   ),
