@@ -100,17 +100,35 @@ class _PostosPageState extends State<PostosPage> {
                           right: 10,
                         ),
                         child: Container(
-                          height: 70,
+                          height: 80,
+                          width: 80,
                           padding: EdgeInsets.all(15),
+                          alignment: Alignment.center,
                           child: Center(
                             child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
                               children: <Widget>[
-                                Text(
-                                  '12.3',
-                                  style: TextStyle(
-                                    fontSize: 18,
-                                    fontWeight: FontWeight.bold,
-                                    color: Color(0xFF6200EE),
+                                Container(
+                                  width: double.infinity,
+                                  decoration: BoxDecoration(
+                                    border: Border(
+                                      bottom: BorderSide(color: Colors.grey)
+                                    )
+                                  ),
+                                  padding: EdgeInsets.only(
+                                    bottom: 3,
+                                  ),
+                                  margin: EdgeInsets.only(
+                                    bottom: 3,
+                                  ),
+                                  child: Text(
+                                    '12.3',
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Color(0xFF6200EE),
+                                    ),
+                                    textAlign: TextAlign.center,
                                   ),
                                 ),
                                 Text(
@@ -118,6 +136,7 @@ class _PostosPageState extends State<PostosPage> {
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: Colors.grey,
+                                    fontWeight: FontWeight.bold
                                   ),
                                 ),
                               ],
